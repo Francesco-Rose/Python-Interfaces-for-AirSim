@@ -1,0 +1,94 @@
+<FlightPlan>
+  
+	<Locale>
+		<speedUnits>ms</speedUnits>
+		<altitudeUnits>m</altitudeUnits>
+		<trackseparationUnits>m</trackseparationUnits>
+		<distanceUnits>m</distanceUnits>
+		<decimalSeparator>.</decimalSeparator>
+		<groupSeparator/>
+	</Locale>
+
+	<MainFP>
+		<name>NEIGHBORHOOD FLIGHT PLAN.</name>
+		<description>Neighborhood Surveillance Mission.</description>
+		
+		<stages>
+		
+			<stage id="First Part">
+				<leg id="zero-point" xsi_type="fp_TFLeg">
+					<dest>
+						<name>N0</name>
+						<north_coordinate>125</north_coordinate>
+						<east_coordinate>0</east_coordinate>
+						<altitude>-20</altitude>
+						<speed>5</speed>
+						<next>first-point</next>
+					</dest>
+				</leg>
+			</stage>
+			
+			<stage id="Iterative Leg Part">
+				<leg id="first-point" xsi_type="fp_IterativeLeg">
+					<next>third-point</next>
+					<body>second-point-one second-point-two second-point-three second-point-four</body>
+					<upperBound>20</upperBound>
+					<first>second-point-one</first>
+					<last>second-point-four</last>							
+				</leg> 
+					<leg id="second-point-one" xsi_type="fp_TFLeg">
+						<dest>
+							<name>N21</name>
+							<north_coordinate>125</north_coordinate>
+							<east_coordinate>125</east_coordinate>
+							<altitude>-30</altitude>
+							<speed>10</speed>
+							<next>second-point-two</next>
+						</dest>
+					</leg>
+					<leg id="second-point-two" xsi_type="fp_TFLeg">
+						<dest>
+							<name>N22</name>
+							<north_coordinate>-125</north_coordinate>
+							<east_coordinate>125</east_coordinate>
+							<altitude>-30</altitude>
+							<speed>10</speed>
+							<next>second-point-three</next>
+						</dest>
+					</leg>
+					<leg id="second-point-three" xsi_type="fp_TFLeg">
+						<dest>
+							<name>N23</name>
+							<north_coordinate>-125</north_coordinate>
+							<east_coordinate>-125</east_coordinate>
+							<altitude>-30</altitude>
+							<speed>10</speed>
+							<next>second-point-four</next>
+						</dest>
+					</leg>
+					<leg id="second-point-four" xsi_type="fp_TFLeg">
+						<dest>
+							<name>N24</name>
+							<north_coordinate>125</north_coordinate>
+							<east_coordinate>-125</east_coordinate>
+							<altitude>-30</altitude>
+							<speed>10</speed>
+							<next>third-point</next>
+						</dest>
+					</leg>
+					<leg id="third-point" xsi_type="fp_TFLeg">
+						<dest>
+							<name>N4</name>
+							<north_coordinate>0</north_coordinate>
+							<east_coordinate>0</east_coordinate>
+							<altitude>-30</altitude>
+							<speed>3</speed>
+						</dest>
+					</leg>		
+			</stage>
+			
+		</stages>
+		
+	</MainFP>
+	
+</FlightPlan>
