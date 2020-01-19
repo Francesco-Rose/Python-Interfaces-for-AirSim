@@ -7,4 +7,4 @@ This is a Python interface for AirSim simulator to fly one drone using an high-l
 
 # ------------------------------------------------------ #
 
-If you want to use these interfaces and FPs read the doc and please, cite my master thesis in your work. (The doc of the master thesis will be added later)
+If you want to use these interfaces and FPs read the doc and please, cite my master thesis in your work.
